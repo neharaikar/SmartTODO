@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Smart TODO</string>
+    <string name="task_name">Enter Task</string>
+</resources>
