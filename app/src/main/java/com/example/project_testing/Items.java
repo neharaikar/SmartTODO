@@ -49,6 +49,7 @@ public class Items extends AppCompatActivity
             else
             {
                 newstr=newstr+ch;
+
             }
         }
         // When list view item is clicked.
