@@ -23,7 +23,7 @@ public class Items extends AppCompatActivity
        System.out.println(position+"..........................notification class");
         System.out.println(itemlist+"..........................notification class");
         ArrayList<String> listItems=new ArrayList<String>();
-        ArrayAdapter<String> adapter;
+        final ArrayAdapter<String> adapter;
         setContentView(R.layout.item_list);
         final ListView itemlistview=(ListView)findViewById(android.R.id.list);
 
@@ -52,10 +52,12 @@ public class Items extends AppCompatActivity
             }
         }
         // When list view item is clicked.
+
         itemlistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int itemIndex, long l) {
-              /////// checkbox
+              adapter.remove(adapter.getItem(itemIndex));
+              adapter.notifyDataSetChanged();
             }
         });
 
